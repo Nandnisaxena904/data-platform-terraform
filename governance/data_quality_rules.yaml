@@ -1,0 +1,26 @@
+# Data Quality Rules for NYC Taxi Dataset
+rules:
+  - id: DQ001
+    name: "No null taxi_zone_id"
+    description: "Taxi zone ID should never be null"
+    columns:
+      - taxi_zone_id
+    checks:
+      - not_null
+
+  - id: DQ002
+    name: "Passenger count positive"
+    description: "Passenger count must be greater than zero"
+    columns:
+      - passenger_count
+    checks:
+      - min_value: 1
+
+  - id: DQ003
+    name: "Trip distance positive"
+    description: "Trip distance must be greater than zero"
+    columns:
+      - trip_distance
+    checks:
+      - min_value: 0.1
+

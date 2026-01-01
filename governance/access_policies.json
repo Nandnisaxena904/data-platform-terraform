@@ -1,0 +1,26 @@
+{
+  "policies": [
+    {
+      "id": "AP001",
+      "name": "Read-only Analyst",
+      "description": "Can query data but cannot modify",
+      "roles": ["analyst"],
+      "permissions": ["select"]
+    },
+    {
+      "id": "AP002",
+      "name": "ETL Developer",
+      "description": "Can read/write to staging tables",
+      "roles": ["etl_dev"],
+      "permissions": ["select", "insert", "update", "delete"]
+    },
+    {
+      "id": "AP003",
+      "name": "Data Steward",
+      "description": "Full control on master data",
+      "roles": ["data_steward"],
+      "permissions": ["select", "insert", "update", "delete", "manage_rules"]
+    }
+  ]
+}
+

@@ -1,0 +1,12 @@
+datasets:
+  nyc_taxi_zones:
+    description: "NYC Taxi zones master data"
+    owner: "Data Steward"
+    columns:
+      - id
+      - zone
+      - borough
+    sensitive_columns:
+      - None
+    retention_policy: "Indefinite"
+
